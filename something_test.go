@@ -7,9 +7,11 @@ import (
 )
 
 func TestDoSomething(t *testing.T) {
-	Convey("hi", t, func(c C) {
-		ctx := context.TODO()
-		err := doSomething(ctx)
-		So(err, ShouldBeNil)
+	Convey("hello", t, func(c C) {
+		Convey("world", func() {
+			ctx := context.TODO()
+			err := doSomething(ctx)
+			So(err, ShouldBeNil)
+		})
 	})
 }
